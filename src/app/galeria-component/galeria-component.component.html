@@ -1,0 +1,19 @@
+<h1>{{titulo}}</h1>
+<div *ngIf="fotos.length != 0">
+    <img *ngIf="index === 0" src="{{fotos[0]}}" alt="">
+    <img *ngIf="index === 1" src="{{fotos[1]}}" alt="">
+    <img *ngIf="index === 2" src="{{fotos[2]}}" alt="">
+    <img *ngIf="index === 3" src="{{fotos[3]}}" alt="">
+    <img *ngIf="index === 4" src="{{fotos[4]}}" alt="">
+</div>
+
+<div *ngIf="fotos.length === 0">Nenhuma foto</div>
+
+<span>Foto {{index+1}} de {{fotos.length}}</span>
+
+<div class="buttons">
+    <button [disabled]="index === 0" (click)="first()">|<</button>
+    <button [disabled]="index === 0" (click)="previous()"><</button>
+    <button [disabled]="index === fotos.length-1" (click)="next()">></button>
+    <button [disabled]="index === fotos.length-1" (click)="last()">>|</button>
+</div>

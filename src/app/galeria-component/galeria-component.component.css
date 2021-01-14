@@ -1,0 +1,11 @@
+
+
+img {
+    display: block;
+    height: 500px;
+    max-width: 500px;
+}
+
+.buttons {
+    display: block;
+}
